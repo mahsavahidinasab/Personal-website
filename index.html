@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mahsa's Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Basic&family=Elms+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- putting the whole body into a div for having better experience on bigger screens -->
+    <div id="body">
+        <header class="sticky-top">
+            <!-- navbar -->
+            <nav class="navbar navbar-expand-lg navbar-dark mx-lg-5">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">
+                        <h2><span>&lt;/> </span>Mahsa</h2>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle Navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                            <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </nav>
+        </header>
+        <!-- body contect -->
+        <div class="container-fluid">
+            <!-- hero -->
+            <section class="container py-5 mt-lg-5" id="hero">
+                <div class="row align-items-center text-center text-md-start">
+
+                    <!-- Image -->
+                    <div class="col-12 col-md-4 order-1 order-md-2 mb-4 mb-md-0">
+                        <img src="images/Mahsa1.jpeg" alt="profile picture" class="img-fluid rounded mx-auto d-block">
+                    </div>
+
+                    <!-- Content -->
+                    <div class="col-12 col-md-8 order-2 order-md-1">
+                        <h1>Hey, I'm Mahsa! 👋</h1>
+                        <p>
+                            An IT specialist from Montreal, Canada.
+                            As you can see I know a bit of frontend too :D.
+                        </p>
+                        <button onclick="document.getElementById('projects').scrollIntoView({ behavior: 'smooth' })"
+                            class="btn btn-primary px-5 py-2 mx-lg-3 ">
+                            My Projects &nbsp;&nbsp;&nbsp;>>
+                        </button>
+                    </div>
+
+                </div>
+            </section>
+            <!-- About -->
+            <section id="about">
+                <h1 class="ms-lg-3 text-center text-md-start py-5">About Me!</h1>
+                <h3 class="ms-lg-5 text-center text-md-start py-1">Who am I?</h3>
+                <p class="ms-lg-5 text-center text-md-start">
+                    This is Mahsa, I borned in 1994. passionate about coding and learning new stuff. Everyday working on
+                    myself to get better and recently trying to crochet and show up at gym :S
+                </p>
+                <h3 class="ms-lg-5 text-center text-md-start py-1">How did I start programming?</h3>
+                <p class="ms-lg-5 text-center text-md-start">
+                    As I studied Mechanical engineering, I had no clue about programming. But when I went to a company
+                    for
+                    interview they gave me the opportunity to learn coding. It was all about chance but then it became
+                    everything...
+                </p>
+            </section>
+            <!-- projects -->
+            <section id="projects">
+                <h1 class="ms-lg-3 text-center text-md-start py-5">Projects I did</h1>
+                <div class="row justify-content-center g-4">
+                    <div class="card mx-5 bg-dark bg-gradient" style="width: 18rem;">
+                        <img src="images/image4.avif" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text">Created multiple landing pages uisng HTML/CSS</p>
+                        </div>
+                    </div>
+
+                    <div class="card mx-5 bg-dark bg-gradient" style="width: 18rem;">
+                        <img src="images/image2.avif" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text">Designed and coded backend on Python for multiple projects.</p>
+                        </div>
+                    </div>
+
+                    <div class="card mx-5 bg-dark bg-gradient" style="width: 18rem;">
+                        <img src="images/image3.avif" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text">Worked on SQL and noSQL databases.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+            <!-- Contact -->
+            <section id="contact">
+                <h1 class="ms-lg-3 text-center text-md-start py-5">Contact Me!</h1>
+                <div class="d-flex flex-column flex-md-row justify-content-center align-items-center gap-4">
+
+                    <a href="https://ca.linkedin.com/" target="_blank">
+                        <img src="images/linkedin-svgrepo-com.svg" alt="linkedin" class="img-fluid">
+                    </a>
+
+                    <a href="https://x.com/" target="_blank">
+                        <img src="images/twitter-color-svgrepo-com.svg" alt="twitter" class="img-fluid">
+                    </a>
+
+                    <a href="mailto:mahsa-vahidinasab@gmail.com" target="_blank">
+                        <img src="images/email-svgrepo-com.svg" alt="email" class="img-fluid">
+                    </a>
+
+                </div>
+
+            </section>
+
+        </div>
+        <!-- scroll to top button -->
+        <button type="button" class="btn btn-outline-warning sticky-bottom me-5 float-end rounded-circle px-3 py-2"
+            onclick="document.getElementById('hero').scrollIntoView({ behavior: 'smooth' })">^</button>
+        <footer>
+            <p>Made a small project using HTML/CSS 2026&copy;</p>
+            <p>Let's keep in touch: <a href="mailto:mahsa-vahidinasab@gmail.com">Email me!</a></p>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
