@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather!</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="weatherstyle.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Basic&family=Elms+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+<body>
+    <div id="body-container">
+        <header class="sticky-top">
+            <!-- navbar -->
+            <nav class="navbar navbar-expand-lg navbar-dark mx-lg-5">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="index.html#">
+                        <h2><span>&lt;/> </span>Mahsa</h2>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle Navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                            <li class="nav-item"><a class="nav-link" href="index.html#">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
+                            <li class="nav-item"><a class="nav-link" href="index.html#projects">Projects</a></li>
+                            <li class="nav-item"><a class="nav-link" href="index.html##contact">Contact</a></li>
+                            <li class="nav-item"><a class="nav-link" href="weather.html">Weather</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </nav>
+        </header>
+
+        <section class="card">
+            <div class="search">
+                <input type="text" placeholder="enter city name..." spellcheck="false">
+                <button><img src="images/search.png" alt="search"></button>
+            </div>
+            <div class="weather">
+                <img src="images/rain.png" alt="weather icon" class="weather-icon">
+                <h1 class="temp">22°C</h1>
+                <h2 class="city">New York</h2>
+                <div class="details">
+                    <div class="col">
+                        <img src="images/humidity.png" alt="humidity">
+                        <div>
+                            <p class="humidity">50%</p>
+                            <p>humidity</p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <img src="images/wind.png" alt="wind">
+                        <div>
+                            <p class="wind">15 km/h</p>
+                            <p>Wind Speed</p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <img src="images/feels-like.png" alt="feels-like">
+                        <div>
+                            <p class="feels-like">15 km/h</p>
+                            <p>Feels Like</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+        <!-- footer -->
+        <footer>
+            <p>Made a small project using HTML/CSS 2026&copy;</p>
+            <p>Let's keep in touch: <a href="mailto:mahsa-vahidinasab@gmail.com"><b>Email me!</b></a></p>
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>

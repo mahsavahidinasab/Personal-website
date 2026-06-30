@@ -12,7 +12,7 @@ body {
     line-height: 1;
 }
 
-#body {
+#body-container {
     max-width: 1600px;
     box-shadow:  0 0 2px 0  #000000;
     margin: auto;
@@ -105,18 +105,13 @@ header h2 span {
     background-color: #252525;
 }
 
-@media (min-width:1200px) {
-    #contact img {
-    width: 80px;
-    height: 80px;
-    margin-right: 50px;
-}
-}
 
 /* footer
 -------------------------- */
 footer {
     padding: 20px;
+    position: relative;
+    bottom: 0px;
 }
 footer p {
     font-size: 0.8rem;
@@ -126,4 +121,12 @@ footer p {
 
 .sticky-bottom {
     bottom: 20px;
+}
+
+@media (min-width:1200px) {
+    #contact img {
+    width: 80px;
+    height: 80px;
+    margin-right: 50px;
+}
 }
