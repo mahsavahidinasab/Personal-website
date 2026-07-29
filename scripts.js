@@ -3,8 +3,24 @@ const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q="
 
 const searchBox = document.querySelector(".search input");
 const searchBtn = document.querySelector(".search button");
+// Weather display elements
+const weather = document.querySelector(".weather");
 const weatherIcon = document.querySelector(".weather-icon");
+const cityElement = document.querySelector(".city");
+const tempElement = document.querySelector(".temp");
+const humidityElement = document.querySelector(".humidity");
+const windElement = document.querySelector(".wind");
+const feelsLikeElement = document.querySelector(".feels-like");
 
+
+const weatherImages = {
+    Clouds: "images/cloudy.png",
+    Clear: "images/clear.png",
+    Rain: "images/rain.png",
+    Drizzle: "images/drizzle.png",
+    Snow: "images/snow.png",
+    Thunderstorm: "images/thunderstorm.png"
+};
 
 function delay(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
@@ -17,38 +33,27 @@ async function checkWeather(city){
 
         if(response.status === 404){
             alert("City name is not valid");
-            document.querySelector(".weather").style.display = "none";
+            weather.style.display = "none";
         }
         else{
             await delay(1000);
             let data = await response.json();
-            console.log(data);
-            // updating the body based in the response
-
-            document.querySelector(".city").innerHTML = data.name;
-            document.querySelector(".temp").innerHTML = Math.round(data.main.temp) + "°C";
-            document.querySelector(".humidity").innerHTML = data.main.humidity + "%";
-            document.querySelector(".wind").innerHTML = data.wind.speed + " km/h";
-            document.querySelector(".feels-like").innerHTML = Math.round(data.main.feels_like) + "°C";
+            
+            cityElement.innerHTML = data.name;
+            tempElement.innerHTML = Math.round(data.main.temp) + "°C";
+            humidityElement.innerHTML = data.main.humidity + "%";
+            windElement.innerHTML = data.wind.speed + " km/h";
+            feelsLikeElement.innerHTML = Math.round(data.main.feels_like) + "°C";
 
             // updating the images based on the response
 
-            if(data.weather[0].main === "Clouds") {
-                weatherIcon.src = "images/cloudy.png";
-            }else if(data.weather[0].main === "Clear"){
-                weatherIcon.src = "images/clear.png";
-            }else if(data.weather[0].main === "Rain"){
-                weatherIcon.src = "images/rain.png";
-            }else if(data.weather[0].main === "Drizzle"){
-                weatherIcon.src = "images/drizzle.png"
-            }else if(data.weather[0].main === "Snow"){
-                weatherIcon.src = "images/snow.png"
-            }else if(data.weather[0].main === "Thunderstorm"){
-                weatherIcon.src = "images/thunderstorm.png";
+            const weatherType = data.weather[0].main;
+
+            if (weatherImages[weatherType]) {
+                weatherIcon.src = weatherImages[weatherType];
             }
 
-            document.querySelector(".weather").style.display = "block";
-
+            weather.style.display = "block";
 
         }
     } catch (error) {
